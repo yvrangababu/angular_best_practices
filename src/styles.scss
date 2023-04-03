@@ -2,3 +2,5 @@
 
 @import './assets/styles/variables.scss';
 @import './assets/styles/common.style.scss';
+@import "~ng-zorro-antd/style/index.min.css"; /* Import base styles */
+@import "~ng-zorro-antd/button/style/index.min.css";  /* Import one component's styles */
