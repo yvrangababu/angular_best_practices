@@ -9,6 +9,11 @@ import en from '@angular/common/locales/en';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgxsLoggerPluginModule } from '@ngxs/logger-plugin';
+import { NgxsModule } from '@ngxs/store';
+import { environment } from 'src/environments/environment';
+import { AppState } from './states/state/app.state';
+import { ThemeState } from './states/state/theme.state';
 
 registerLocaleData(en);
 
@@ -21,7 +26,19 @@ registerLocaleData(en);
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    NgxsModule.forRoot(
+      [
+        AppState,
+        ThemeState
+      ],
+      {
+        developmentMode: !environment.production
+      }
+    ),
+    NgxsLoggerPluginModule.forRoot({
+      disabled: environment.production
+    }),
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }],
   bootstrap: [AppComponent]

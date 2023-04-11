@@ -1,0 +1,54 @@
+@import "/src/assets/styles/variables.scss";
+
+.theme-selection-container {
+    display: inline-block;
+
+    .theme {
+        background-color: $card-bg;
+        padding: 5px;
+        width: 180px;
+        border-radius: 5px;
+        display: inline-block;
+        margin-right: 10px;
+        cursor: pointer;
+
+        .theme-image {
+            width: auto;
+            height: 100px;
+            border-radius: 5px;
+            
+        }
+
+        .theme-name {
+            padding: 10px 0px;
+            font-size: $font-size-medium;
+            margin-bottom: 0px;
+        }
+
+        .light {
+            //background: url('../../../../assets/eots/images/light.png');
+            background-color: blue;
+            background-position: center;
+            background-size: cover;
+            
+        }
+
+        .dark {
+            //background: url('../../../../assets/eots/images/dark.png');
+            background-color: black;
+            background-position: center;
+            background-size: cover;
+
+        }
+
+        .default {
+            background-color: $body-bg;
+        }
+    }
+
+    .selected {
+        background-color: $primary-color;
+        color: $base-white;
+    }
+
+}

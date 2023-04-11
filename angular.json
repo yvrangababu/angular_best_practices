@@ -36,10 +36,16 @@
               }
             ],
             "styles": [
-              "src/theme.less",
-              "src/styles.scss"
+              "src/styles.scss",
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/ng-zorro-antd/ng-zorro-antd.css",
+              "node_modules/ng-zorro-antd/ng-zorro-antd.dark.css"
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/jquery/dist/jquery.min.js",
+              "./node_modules/@popperjs/core/dist/umd/popper.min.js",
+              "./node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ]
           },
           "configurations": {
             "production": {

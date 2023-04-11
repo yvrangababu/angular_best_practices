@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,400;1,900&display=swap');
 
 //
 // Variables
@@ -9,10 +8,55 @@
 //
 //## Font, line-height, and color for body text, headings, and more.
 
-$font-family-base:        'Lato', 'Arial', sans-serif;
-$font-family-normal:      'Lato', 'Arial', sans-serif;
-$font-family-medium:      'Lato', 'Arial', sans-serif;
-$font-family-bold:        'Lato', 'Arial', sans-serif;
+@font-face {
+    font-family: 'Avenir-Black';
+    src: url('../font/avenir-black/AvenirLTStd-Black.eot');
+    src: url('../font/avenir-black/AvenirLTStd-Black.eot?#iefix') format('embedded-opentype'),
+         url('../font/avenir-black/AvenirLTStd-Black.woff2') format('woff2'),
+         url('../font/avenir-black/AvenirLTStd-Black.woff') format('woff'),
+         url('../font/avenir-black/AvenirLTStd-Black.ttf') format('truetype'),
+         url('../font/avenir-black/AvenirLTStd-Black.svg#AvenirLTStd-Black') format('svg');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Avenir-Book';
+    src: url('../font/avenir-book/AvenirLTStd-Book.eot');
+    src: url('../font/avenir-book/AvenirLTStd-Book.eot?#iefix') format('embedded-opentype'),
+         url('../font/avenir-book/AvenirLTStd-Book.woff2') format('woff2'),
+         url('../font/avenir-book/AvenirLTStd-Book.woff') format('woff'),
+         url('../font/avenir-book/AvenirLTStd-Book.ttf') format('truetype'),
+         url('../font/avenir-book/AvenirLTStd-Book.svg#AvenirLTStd-Book') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Avenir-Roman';
+    src: url('../font/avenir-roman/AvenirLTStd-Roman.eot');
+    src: url('../font/avenir-roman/AvenirLTStd-Roman.eot?#iefix') format('embedded-opentype'),
+         url('../font/avenir-roman/AvenirLTStd-Roman.woff2') format('woff2'),
+         url('../font/avenir-roman/AvenirLTStd-Roman.woff') format('woff'),
+         url('../font/avenir-roman/AvenirLTStd-Roman.ttf') format('truetype'),
+         url('../font/avenir-roman/AvenirLTStd-Roman.svg#AvenirLTStd-Roman') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+$font-family-avenir-black:  'Avenir-Black', 'Arial', sans-serif;
+$font-family-avenir-roman:  'Avenir-Roman', 'Arial', sans-serif;
+$font-family-avenir-book:   'Avenir-Book', 'Arial', sans-serif;
+
+$font-family-base:        $font-family-avenir-book;
+$font-family-normal:      $font-family-base;
+$font-family-medium:      $font-family-avenir-roman;
+$font-family-bold:        $font-family-avenir-black;
 
 $font-size-base:          14px;
 $font-size-medium:        13px;
@@ -136,17 +180,7 @@ $border-radius-small:       2px;
 //## Customizes the `.table` component with basic values, each used across all table variations.
 
 //## Light Theme
-$grid-theme: (
-    background-color:                     var(--background-cards),
-    selected-row-background-color:        lighten(#0e7cfd, 25%),
-    odd-row-background-color:             var(--background-cards),
-    control-panel-background-color:       var(--background-cards),
-    header-background-color:              var(--background-cards),
-    foreground-color:                     var(--text-color),
-    data-color:                           ag-derived(foreground-color),
-    subheader-background-color:           var(--background-cards),
-    subheader-toolbar-background-color:   var(--background-cards)   
-);
+
 
 //== Buttons
 //

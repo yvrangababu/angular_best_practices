@@ -1,1 +1,24 @@
-<p>them-configuration works!</p>
+<h1 class="title">Customize appearance</h1>
+
+<p class="sub-content pt-2 pb-2">
+    Change your ProACT application theme
+</p>
+
+<div class="theme-selection-container">
+
+    <div class="theme" [class]="{'selected' : choosenBy == 'system'}" matRipple (click)="setTheme('light', 'system')">
+        <div class="theme-image default" [style.background]="systemTheme"></div>
+        <p class="theme-name disable-text-select">System default</p>
+    </div>
+
+    <div class="theme" [class]="{'selected' : choosenBy == 'custom' && theme == 'light'}" matRipple (click)="setTheme('light', 'custom')">
+        <div class="theme-image light"></div>
+        <p class="theme-name disable-text-select">Light theme</p>
+    </div>
+
+    <div class="theme" [class]="{'selected' : choosenBy == 'custom' && theme == 'dark'}" matRipple (click)="setTheme('dark', 'custom')">
+        <div class="theme-image dark"></div>
+        <p class="theme-name disable-text-select">Dark theme</p>
+    </div>
+
+</div>

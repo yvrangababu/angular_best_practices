@@ -1,6 +1,173 @@
+@use '@angular/material' as mat;
+@import './assets/styles/color.palette.scss';
+@import './assets/styles/variables.scss';
+@import '~@angular/material/theming';
+@import "./assets/styles/common.style.scss";
+@import "~ng-zorro-antd/ng-zorro-antd.dark.css";
+
+
+/* Customizing material colors */
+
+$proact-primary: mat-palette($primary-palette);
+$proact-accent: mat-palette($secondary-palette);
+$proact-warn: mat-palette($mat-deep-orange);
+
+$proact-light-theme: mat-light-theme($proact-primary, $proact-accent, $proact-warn);
+$proact-dark-theme: mat-dark-theme($proact-primary, $proact-accent, $proact-warn);
+
+
+.material-dark {
+  @include angular-material-theme($proact-dark-theme);
+}
+
+.material-light {
+  @include angular-material-theme($proact-light-theme);
+}
+
+/* Customizing material font */
+
+$proact-font: mat-typography-config(
+  $font-family: $font-family-base,
+  $headline: mat-typography-level(18px, 20px, 700),
+  $body-1: mat-typography-level(14px, 16px, 500)
+);
+
+@include mat-core($proact-font);
+
 /* You can add global styles to this file, and also import other style files */
 
-@import './assets/styles/variables.scss';
-@import './assets/styles/common.style.scss';
-@import "~ng-zorro-antd/style/index.min.css"; /* Import base styles */
-@import "~ng-zorro-antd/button/style/index.min.css";  /* Import one component's styles */
+html{
+  overflow: hidden;
+}
+html, body { height: 100%; }
+
+body { 
+  margin: 0; 
+  font-family: $font-family-base; 
+  background-color: $body-bg !important;
+  color: $text-color !important;
+}
+
+.float-right {
+  text-align: right;
+}
+
+.danger-btn {
+  color: $brand-red !important;
+}
+
+.m-t-12 {
+  margin-top: 12px !important;
+}
+
+//Info Colors
+
+
+
+
+
+/* Scrollbar */
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: $transparent-container;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $transparent-text;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: $text-color;
+}
+
+/* Notification */
+
+.custom-toaster {
+  border-radius: 5px;
+  background-color: $body-bg;
+  color: $text-color;
+}
+
+.ant-message .anticon {
+  top: -4.5px !important;
+}
+
+.action-group button i{
+  top: 0px !important;
+}
+
+  //Buttons
+
+  .inline-buttons {
+    display: inline-block;
+    margin: 0 !important;
+    padding: 0 !important;
+    font-size: 13px !important;
+    padding-right: 10px !important;
+  }
+
+  .link-text {
+    color: $link-color;
+    transition: 0.3s;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  .link-text:hover {
+    text-decoration: underline;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .block {
+    display: block;
+  }
+
+  .inline-block {
+    display: inline-block;
+  }
+
+  .input-editor {
+    width: 100%;
+  }
+
+  .noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+  }
+
+  .btn-outline {
+    border: 1px solid $primary-color;
+    background: transparent !important;
+    color: $primary-color !important;
+  }
+
+  //Box shadows 
+
+  //Modals
+
+  //Tables
+
+  //Input Groups 
+
+  ////Breadcrumb
+
+
+

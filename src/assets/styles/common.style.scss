@@ -12,3 +12,175 @@ h5 {
   font-family: $font-family-bold;
   margin-bottom: 0 !important;
 }
+
+h5.page-heading {
+
+  font-family: $font-family-bold;
+  color: $text-color;
+}
+
+.title {
+  font-size: $font-size-h2;
+  font-weight: 600;
+  color: $text-color;
+  letter-spacing: 1px;
+}
+
+.card-heading {
+  font-size: $font-size-large;
+  font-family: $font-family-medium;
+  font-weight: 500;
+  text-transform: capitalize;
+  color: var(--text-color);
+}
+
+.sub-title {
+  font-family: $font-family-normal;
+  font-size: $font-size-h3;
+  font-weight: 600;
+  color: $text-color;
+  letter-spacing: 1px;
+}
+
+.sub-content {
+  color: $text-color;
+  font-size: $font-size-base;
+  opacity: 0.9;
+}
+
+.disable-text-select {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+}
+
+
+
+//ant design dark/light theme temp fixes, Delete this in future
+// .ant-breadcrumb a, .ant-breadcrumb-separator{
+//   color: $text-color!important; 
+// }
+
+// .ant-breadcrumb > nz-breadcrumb-item:last-child a{
+//   color: $text-color!important;
+// }
+// .ant-btn > span, .ant-tabs, .ant-select-selection-placeholder {
+//   color: $text-color!important;
+// }
+// .ant-select:not(.ant-select-customize-input) .ant-select-selector .ant-select-selection-search-input::placeholder{
+//   color: $text-color!important;
+// }
+//ant design dark/light theme temp fixes, Delete this in future
+
+.ant-btn-text {
+  &:hover {
+    color: $primary-color !important;
+  }
+}
+.anticon{
+  vertical-align: 0em!important;
+}
+
+.ant-input {
+  height: 36px !important;
+}
+
+.ml-2 {
+  margin-left: 10px;
+}
+
+//AG Grid Status 
+
+.span-success {
+  background-color: $brand-success-opacity;
+  padding: 5px;
+  border-radius: $border-radius-base;
+  color: #FFF;
+}
+
+.span-danger {
+  background-color: $brand-danger-opacity;
+  padding: 5px;
+  border-radius: $border-radius-base;
+  color: #FFF;
+}
+
+.span-warning {
+  background-color: $brand-warning-opacity;
+  padding: 5px;
+  border-radius: $border-radius-base;
+  color: #FFF;
+}
+
+.span-info {
+  background-color: $brand-info-opacity;
+  padding: 5px;
+  border-radius: $border-radius-base;
+  color: #FFF;
+}
+
+.span-disable {
+  background-color: $disabled-color;
+  padding: 5px;
+  border-radius: $border-radius-base;
+  color: $base-black;
+}
+
+
+.ant-menu-vertical {
+  .ant-menu-submenu-selected {
+    background: rgb(24 144 255 / 20%);
+    border-right: 3px solid $primary-color;
+  }
+}
+
+.ant-tabs-tab-btn {
+  letter-spacing: 1px;
+}
+
+.ant-tabs-card>.ant-tabs-nav .ant-tabs-tab, .ant-tabs-card>div>.ant-tabs-nav .ant-tabs-tab{
+  display: block;
+}
+
+
+.mat-card {
+  padding: 10px !important;
+}
+
+.ant-carousel .slick-slide img {
+  margin: 0 auto;
+}
+
+
+.proact-card {
+  background: $card-bg;
+  border-radius: $border-radius-base;
+  box-shadow: 0px 6px 6px #0000000A;
+  border: 1px solid $border-color-light;
+  padding: 15px;
+  height: 100%;
+
+  h3 {
+    font-size: $font-size-large;
+  }
+
+}
+
+.ant-btn .anticon {
+  position: relative;
+  // top: -3px;
+}
+
+.required{
+  color: $brand-danger-opacity;
+}
